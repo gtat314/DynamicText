@@ -1,0 +1,128 @@
+/*
+	@modCssClasses
+	@customTag: dynamic-text
+	@cssMod: mod_discreet
+	@cssMod: mod_optionalized
+	@cssMod: mod_alignRight
+	@cssMod: mod_alignCenter
+	--theme-border 				rgba(0, 0, 0, 0.1)
+	--theme-transitionDuration 	0.15s
+	--theme-mainFont 			rgba(0, 0, 0, 1)
+	--theme-linkColor 			rgba(68, 68, 255, 1)
+*/
+
+
+
+
+dynamic-text {
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 4rem;
+	margin-left: 0;
+	display: block;
+}
+
+dynamic-text.mod_discreet .text .subtitle {
+	font-weight: 100;
+	line-height: 1.25;
+	font-size: 0.85rem;
+}
+
+dynamic-text .title {
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0.25rem;
+	margin-left: 0;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--theme-border, rgba(0, 0, 0, 0.1));
+	transition: border-bottom 0.15s ease 0s;
+	transition-property: border-bottom-color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}
+
+dynamic-text .title h2 {
+	color: var(--theme-mainFont, rgba(0, 0, 0, 1));
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	transition-property: color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	opacity: 0.6;
+}
+
+
+
+
+dynamic-text .text {
+	transition-property: opacity;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}
+
+dynamic-text.mod_optionalized .text {
+	padding-top: 0.25rem;
+	padding-right: 1.5rem;
+	padding-bottom: 0.25rem;
+	padding-left: 1.5rem;
+}
+
+dynamic-text .text .subtitle {
+	color: var(--theme-secondaryFont, rgba(0, 0, 0, 0.6));
+	font-size: 0.8rem;
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	line-height: 1rem;
+	transition-property: color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}
+
+dynamic-text.href .text .subtitle {
+	opacity: 1;
+	color: var(--theme-mainFont, rgba(0, 0, 0, 1));
+	text-decoration: underline;
+	text-underline-offset: 0.25rem;
+	cursor: pointer;
+	display: block;
+}
+
+dynamic-text.mod_alignRight .text .subtitle {
+	text-align: right;
+}
+
+dynamic-text.mod_alignCenter .text .subtitle {
+	text-align: center;
+}
+
+dynamic-text .text .subtitle b {
+	font-weight: 600;
+}
+
+dynamic-text .text .subtitle a {
+	text-decoration: underline;
+	text-decoration-style: dashed;
+	text-decoration-thickness: 1px;
+	font-weight: 600;
+	color: var(--theme-linkColor, rgba(68, 68, 255, 1));
+	transition-property: color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	text-underline-offset: 0.25rem;
+}
+
+
+
+
+@media only screen and (max-device-width: 900px) {
+
+    dynamic-text.mod_optionalized .title h2 {
+        margin-left: 0;
+    }
+
+    dynamic-text.mod_optionalized .text {
+		padding-top: 0.25rem;
+		padding-right: 0.5rem;
+		padding-bottom: 0.25rem;
+		padding-left: 0.5rem;
+    }
+
+}
